@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<!-- Template Designed by Sudotech 
+	open source code used :
+	  1.animate.css
+	  2.AOS(animate on scroll)
+
+	  Technologies used:
+          
+          1. Bootstrap
+          2. Jquery
+      -->
+<html>
+    <head>
+	   <title>Shanti Kunj Resort & Restaurant</title>
+
+
+	<!--External CSS -->
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/jquery.css">
+<!--	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"> -->
+
+	<!-- External CSS End-->
+	
+
+  
+
+   </head>
+<body>
+<div id="loading"> <center><img id="loader" src="images/loader.gif">
+                     <h1>Designed By Sudotech</h1></center></div>
+
+	<div class="cont">
+
+
+    <!--Topbar of the website-->
+   <div class="jumbotron w-100 p-3 bg-dark topbar animated zoomIn">
+          
+          <div class="float-left">
+          	<img  class="img-fluid nav-brand brandImg" src="images/brand.png"> 
+          </div>
+		       <h3 class="text-center mt-0 text-light"> Shanti Kunj Resort & Restaurant <sup><span class="text-light stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half"></i><a href="https://www.google.com/maps/place/Shanti+Kunj+Resort+Dhamak/@30.2503392,78.8750617,17z/data=!4m9!3m8!1s0x3909b0649a10babf:0x729185b36126f637!5m1!1s2018-06-12!8m2!3d30.2503392!4d78.8772504!9m1!1b1"> (4.5/5)</a> </sup></span></h3> 
+		           
+		           <h5 class="text-center mt-0 text-light">Near Dhari Devi Temple, Badrinath Marg, Dhamak, Kalyasaur, Dist. Pauri(Gwl)</h5>
+
+                <div class="alert-primary container text-center w-25 ConditionInfo">
+         	                      <i class="fas fa-map-marker"></i> <span class="font-weight-bold text-primary"> Weather Today Here : </span> <a href="https://www.accuweather.com/en/in/srinagar/191354/weather-forecast/191354#"><i class="fas fa-sun"></i> Cool , 28<sup>o</sup>C</a>
+         	                       <i class="fas fa-phone-square"></i><br> +91 7500020237
+                </div>
+
+    </div>
+
+<!--NavBar For Mobile which stays hidden on Desktop Version of Website-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark MobBar fixed-top">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <a class="navbar-brand" href="#">Navbar</a>
+
+     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                   <li class="nav-item active">
+                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                   </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Link</a>
+                 </li>
+                <li class="nav-item">
+                     <a class="nav-link" href="#">Disabled</a>
+                </li>
+             </ul>
+    
+    </div>
+</nav>
+<!--End Of mobile Navbar-->
+
+
+<!-- Enquiry Form -->
+<div class="formBack jumbotron" data-aos="fade-up">
+<div class="container border w-75 EnqForm">
+ <div class="row">
+    <div class="col-md-4">
+       <div class="form_main">
+                <h4 class="heading"><strong>Fast </strong> Enquiry <span></span></h4>
+                      <div class="form">
+                            <form action="send.php" method="post" id="contactFrm" name="contactFrm">
+                                <input type="text" required="" placeholder="Your Name" value="" name="name" class="txt">
+                                <input type="tel" required="" placeholder="Mobile Number" value="" name="mob" class="txt"><br>
+                                <input type="text" required="" id="datepicker" placeholder="Date" name="date"class="txt"><br><br>
+                                    <strong>No. Of Rooms :</strong> <select placeholder="Number Of Rooms" name="nrooms" required="">
+                                                         <option value="1">1</option>
+                                                         <option value="2">2</option>
+  														<option value="3">3</option>
+  														<option value="4">4</option>
+													</select> <br>
+                    
+    							<strong>Types Of Rooms :</strong> <select placeholder="Types of Room" name="roomtype" required="">
+  												<option value="Double Bed">Double Bed</option>
+  												<option value="Triple Bed">Triple Bed</option>
+  												<option value="Four Bed">Four Bed</option>
+  												<option value="Ten Bed">10 Bed</option>
+											   </select> 
+                   
+                               <input type="submit" value="Check" name="submit" class="btn btntxt">
+                            </form>
+                            <div id=loading-image hidden="hidden">
+              <img class=img-responsive height="60" width="60" src="ajax-loader.gif">
+            </div>
+                        </div>
+        </div>          
+    </div>
+ </div>
+</div>
+</div>
+
+<!--End of Enquiry Form-->
+
+
+<!--Desktop Navbar That stays hidden on Mobile-->
+<div>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark DeskBar"
+      id="DesktopNav" data-aos="fade-up" aos-duration=3000>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#"><img  class="img-fluid NavImg" src="images/brand.png"> </a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mt-lg-0">
+      <li class="nav-item m-2">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item m-2">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item m-2">
+        <a class="nav-link" href="#">Something else</a>
+      </li>
+      <li class="nav-item m-2">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item m-2">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+    </ul>
+    
+  </div>
+</nav>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("DesktopNav");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticker")
+  } else {
+    navbar.classList.remove("sticker");
+  }
+}
+</script>
+</div>
+<!--End of Desktop Navbar-->
+<br>
+
+<!--Bootstrap Courosel-->
+
+<div data-aos="fade-up"
+     data-aos-duration="3000">
+<div id="carouselExampleIndicators" class="carousel slide container BootSlider" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="images/chardham.jpg" alt="First slide">
+       <div class="carousel-caption">
+        <h3>Chicago</h3>
+        <p>Thank you, Chicago!</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="images/dhari_devi.jpg" alt="Second slide">
+       <div class="carousel-caption">
+        <h3>Chicago</h3>
+        <p>Thank you, Chicago!</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="images/others.png" alt="Third slide">
+       <div class="carousel-caption">
+        <h3>Chicago</h3>
+        <p>Thank you, Chicago!</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+<!--Bootstrap Courosel End-->
+
+<br>
+<div class="jumbotron jumbotron-fluid text-center shadow"data-aos="fade-up">
+  <div class="container">
+    <p class="lead main-text">For Enquiry call</p>
+    <h2 class="simple-text">+91-7500020237</h2>
+    <button class="btn BtnCus text-light">Contact Us</button>
+    
+  </div>
+</div>
+
+
+
+
+<div class="row ml-2 mr-2 mt-4 mb-2 shadow p-5" data-aos="fade-up"
+     data-aos-duration="3000">
+        <div class="col-lg-6">
+          <h2>Shanti Kunj Resort  Restaurant</h2>
+          <p>Near Dhari Devi Temple, Dhamak, Pauri (Gwl), Uttrakhand</p>
+          <ul>
+            <li>
+              <strong>Comfortable Stay</strong>
+            </li>
+            <li>Deluxe Rooms</li>
+            <li>Free Parking space</li>
+            <li>On NH-58 : The route to all Four Dhams</li>
+            <li>Relatively Cheap Prices</li>
+          </ul>
+          <p>Welcome to Uttrakhand. Powerful Devotion it is that every year 1 crore+ people visit Devhbumi Uttakhand in all. Here, you will catch glimpse of the real natural beauty. From high mountains to valleys there so much to see!</p>
+        </div>
+        <div class="col-lg-6">
+          <img class="img-fluid rounded" src="images/Chardham.jpg" alt="">
+        </div>
+      </div>
+
+
+
+
+
+<!--Cards-->
+<div class="row mt-5">
+  <div class="col-sm-4">
+    <div class="card ScaleCard" data-aos="fade-left">
+        <div class="card-header">
+    Featured
+  </div>
+  <img class="card-img-top" src="images/chardham.jpg" alt="Card image cap">
+      <div class="card-body">
+      
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn BtnCus text-light">Go somewhere</a>
+      </div>
+      <div class="card-footer text-muted">
+    2 days ago
+  </div>
+    </div>
+  </div>
+  <br>
+  <div class="col-sm-4 ">
+    <div class="card ScaleCard" data-aos="zoom-in">
+       <div class="card-header">
+    Featured
+  </div>
+  <img class="card-img-top" src="images/dhari_devi.jpg" alt="Card image cap">
+      <div class="card-body">
+       
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn BtnCus text-light">Go somewhere</a>
+      </div>
+      <div class="card-footer text-muted">
+    2 days ago
+  </div>
+    </div>
+  </div>
+
+<br>
+  <div class="col-sm-4">
+    <div class="card ScaleCard" data-aos="fade-right">
+        <div class="card-header">
+    Featured
+  </div>
+  <img class="card-img-top" src="images/chardham.jpg" alt="Card image cap">
+      <div class="card-body">
+      
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn BtnCus text-light">Go somewhere</a>
+      </div>
+      <div class="card-footer text-muted">
+    2 days ago
+  </div>
+    </div>
+  </div>
+</div>
+<br>
+<!--End of Cards-->
+
+
+
+
+
+
+
+<footer class="footer" data-aos="fade-up">
+  <div class="row">
+  	<div class="col-sm-6 mt-5">
+
+                  <div id="FooterTxt" class="ml-3 mt-5">
+  		          <a href="#"><i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i> </a>
+  		          <span class="divider"></span>
+  		           <a href="#"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i> </a>
+  		           <span class="divider"></span>
+  		            <a href="#"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i> </a> 
+  		          <span class="divider"></span>
+  		            <br>
+                     <br>
+  		             <p class="text-light"> <strong>Shanti Kunj Resort, NH58<br>
+          Near Dhari Devi Temple<br>
+      Srinagar(Gwl) IN 246174</strong></p>
+  </div>
+  		  	    
+  		  	 <!--   <a href="#" class="nav-link text-light">Home</a>
+  			    <a href="#" class="nav-link text-light">Home</a>
+  			    <a href="#" class="nav-link text-light">Home</a>
+  			    <a href="#" class="nav-link text-light">Home</a> -->
+  		
+  		
+  	</div>
+  	<div class="col-sm-6">
+
+
+<div id="googleMaps" class="container mt-5">
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:100%;width: 100%;'><div id='gmap_canvas' style='height:440px;width:700px;'></div><div><small><a href="embedgooglemaps.com/">https://embedgooglemaps.com/</a></small></div><div><small><a href="http://www.kumo-racing.nl/">newyorkpass</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(30.2503392,78.87725039999998),mapTypeId: google.maps.MapTypeId.HYBRID};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(30.2503392,78.87725039999998)});infowindow = new google.maps.InfoWindow({content:'<strong>Shanti Kunj Resort</strong><br>Shanti Kunj Resort Dhamak, NH 58, Dang Chaura, Uttarakhand<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+
+</div>
+
+</div>
+ 
+</div>
+
+
+<center id="bottom" class="text-muted text-center">Copyright 2018</center> 
+</footer>
+
+
+</body>
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/Custom.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.ui.js"></script>
+
+
+<script>
+//This script is a extra of AOS 
+			AOS.init({
+				easing: 'ease-out-back',
+				duration: 1000
+			});
+		</script>
+		
+  
+  <script>
+
+//This is used on the datepicker input 
+  $( function() {
+    $( "#datepicker" ).datepicker({ minDate: 0 });
+  } );
+
+
+
+  </script>
+
+  		<script>
+jQuery(document).ready(function() {
+   setTimeout(function (){
+
+  jQuery('#loading').fadeOut(2000);
+}, 2000);
+});
+</script>
+<!--End of Document-->
+</html>
