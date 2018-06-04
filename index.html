@@ -32,13 +32,12 @@
 
    </head>
 <body>
-<div id="loading"> <center><img id="loader" src="images/loader.gif">
-                     <h1>Designed By Sudotech</h1></center></div>
+
 
 	<div class="cont">
 
 
-    <!--Topbar of the website-->
+    <!--Topbar of the website
    <div class="jumbotron w-100 p-3 bg-dark topbar animated zoomIn">
           
           <div class="float-left">
@@ -54,9 +53,10 @@
                 </div>
 
     </div>
+-->
 
 <!--NavBar For Mobile which stays hidden on Desktop Version of Website-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark MobBar fixed-top">
+ <!--  <nav class="navbar navbar-expand-lg navbar-dark bg-dark MobBar fixed-top">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
@@ -84,52 +84,10 @@
     
     </div>
 </nav>
-<!--End Of mobile Navbar-->
+End Of mobile Navbar-->
 
 
-<!-- Enquiry Form -->
-<div class="formBack jumbotron" data-aos="fade-up">
-<div class="container border w-75 EnqForm">
- <div class="row">
-    <div class="col-md-4">
-       <div class="form_main">
-                <h4 class="heading"><strong>Fast </strong> Enquiry <span></span></h4>
-                      <div class="form">
-                            <form action="send.php" method="post" id="contactFrm" name="contactFrm">
-                                <input type="text" required="" placeholder="Your Name" value="" name="name" class="txt">
-                                <input type="tel" required="" placeholder="Mobile Number" value="" name="mob" class="txt"><br>
-                                <input type="text" required="" id="datepicker" placeholder="Date" name="date"class="txt"><br><br>
-                                    <strong>No. Of Rooms :</strong> <select placeholder="Number Of Rooms" name="nrooms" required="">
-                                                         <option value="1">1</option>
-                                                         <option value="2">2</option>
-  														<option value="3">3</option>
-  														<option value="4">4</option>
-													</select> <br>
-                    
-    							<strong>Types Of Rooms :</strong> <select placeholder="Types of Room" name="roomtype" required="">
-  												<option value="Double Bed">Double Bed</option>
-  												<option value="Triple Bed">Triple Bed</option>
-  												<option value="Four Bed">Four Bed</option>
-  												<option value="Ten Bed">10 Bed</option>
-											   </select> 
-                   
-                               <input type="submit" value="Check" name="submit" class="btn btntxt">
-                            </form>
-                            <div id=loading-image hidden="hidden">
-              <img class=img-responsive height="60" width="60" src="ajax-loader.gif">
-            </div>
-                        </div>
-        </div>          
-    </div>
- </div>
-</div>
-</div>
 
-<!--End of Enquiry Form-->
-
-
-<!--Desktop Navbar That stays hidden on Mobile-->
-<div>
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark DeskBar"
       id="DesktopNav" data-aos="fade-up" aos-duration=3000>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -158,24 +116,63 @@
     
   </div>
 </nav>
+
+
+
+
+
+  
+  
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <h4 class="modal-title float-left">Fast Enquiry</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+        
+                            <form action="send.php" method="post" id="contactFrm" name="contactFrm">
+                                <input type="text" required="" placeholder="Your Name" value="" name="name" class="form-control"><br>
+                                <input type="tel" required="" placeholder="Mobile Number" value="" name="mob" class="form-control"><br>
+                                <input type="text" required="" id="datepicker" placeholder="Date" name="date" class="form-control"><br><br>
+                                    <strong>No. Of Rooms :</strong> <select placeholder="Number Of Rooms" name="nrooms" required="" class="form-control">
+                                                         <option value="1">1</option>
+                                                         <option value="2">2</option>
+  														<option value="3">3</option>
+  														<option value="4">4</option>
+													</select> 
+                    
+    							<strong>Types Of Rooms :</strong> <select placeholder="Types of Room" name="roomtype" required="" class="form-control">
+  												<option value="Double Bed">Double Bed</option>
+  												<option value="Triple Bed">Triple Bed</option>
+  												<option value="Four Bed">Four Bed</option>
+  												<option value="Ten Bed">10 Bed</option>
+											   </select> 
+                              <br>
+                               <input type="submit" value="Check" name="submit" class="btn btntxt">
+                            </form>
+                            
+                       
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
 </div>
 
-<script>
-window.onscroll = function() {myFunction()};
-
-var navbar = document.getElementById("DesktopNav");
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticker")
-  } else {
-    navbar.classList.remove("sticker");
-  }
-}
-</script>
-</div>
-<!--End of Desktop Navbar-->
 <br>
 
 <!--Bootstrap Courosel-->
@@ -224,11 +221,11 @@ function myFunction() {
 <!--Bootstrap Courosel End-->
 
 <br>
-<div class="jumbotron jumbotron-fluid text-center shadow"data-aos="fade-up">
-  <div class="container">
+<div class="jumbotron jumbotron-fluid text-center">
+  <div class="container" data-aos="fade-up">
     <p class="lead main-text">For Enquiry call</p>
-    <h2 class="simple-text">+91-7500020237</h2>
-    <button class="btn BtnCus text-light">Contact Us</button>
+    <h2 class="simple-text">+91-7500020237 <br> OR<br></h2>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Fast Enquiry</button>
     
   </div>
 </div>
@@ -236,9 +233,9 @@ function myFunction() {
 
 
 
-<div class="row ml-2 mr-2 mt-4 mb-2 shadow p-5" data-aos="fade-up"
+<div class="row ml-2 mr-2 mt-4 mb-2 p-5">
+        <div class="col-lg-6" data-aos="fade-up"
      data-aos-duration="3000">
-        <div class="col-lg-6">
           <h2>Shanti Kunj Resort  Restaurant</h2>
           <p>Near Dhari Devi Temple, Dhamak, Pauri (Gwl), Uttrakhand</p>
           <ul>
@@ -252,7 +249,8 @@ function myFunction() {
           </ul>
           <p>Welcome to Uttrakhand. Powerful Devotion it is that every year 1 crore+ people visit Devhbumi Uttakhand in all. Here, you will catch glimpse of the real natural beauty. From high mountains to valleys there so much to see!</p>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-left"
+     data-aos-duration="6000">
           <img class="img-fluid rounded" src="images/Chardham.jpg" alt="">
         </div>
       </div>
@@ -268,8 +266,8 @@ function myFunction() {
         <div class="card-header">
     Featured
   </div>
-  <img class="card-img-top" src="images/chardham.jpg" alt="Card image cap">
-      <div class="card-body">
+  <img class="card-img-top" src="images/chardham.jpg" alt="Card image cap" data-aos="fade-in">
+      <div class="card-body" data-aos="fade-in">
       
         <h5 class="card-title">Special title treatment</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -281,13 +279,13 @@ function myFunction() {
     </div>
   </div>
   <br>
-  <div class="col-sm-4 ">
+  <div class="col-sm-4">
     <div class="card ScaleCard" data-aos="zoom-in">
        <div class="card-header">
     Featured
   </div>
-  <img class="card-img-top" src="images/dhari_devi.jpg" alt="Card image cap">
-      <div class="card-body">
+  <img class="card-img-top" src="images/dhari_devi.jpg" alt="Card image cap" data-aos="fade-in">
+      <div class="card-body" data-aos="fade-in">
        
         <h5 class="card-title">Special title treatment</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -305,8 +303,8 @@ function myFunction() {
         <div class="card-header">
     Featured
   </div>
-  <img class="card-img-top" src="images/chardham.jpg" alt="Card image cap">
-      <div class="card-body">
+  <img class="card-img-top" src="images/chardham.jpg" alt="Card image cap" data-aos="fade-in">
+      <div class="card-body" data-aos="fade-in">
       
         <h5 class="card-title">Special title treatment</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -327,9 +325,10 @@ function myFunction() {
 
 
 
-<footer class="footer" data-aos="fade-up">
+<footer class="footer">
   <div class="row">
-  	<div class="col-sm-6 mt-5">
+  	<div class="col-sm-6 mt-5" data-aos="fade-up"
+     data-aos-duration="3000">
 
                   <div id="FooterTxt" class="ml-3 mt-5">
   		          <a href="#"><i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i> </a>
@@ -400,12 +399,6 @@ function myFunction() {
 
   </script>
 
-  		<script>
-jQuery(document).ready(function() {
-   
-   jQuery('#loading').fadeOut(2000);
-
-});
-</script>
+ 
 <!--End of Document-->
 </html>
