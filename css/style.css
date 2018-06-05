@@ -251,7 +251,7 @@ table {
 
 .mainhead {
 
-      background-image: url('images/jumback.jpg');
+      background-image: url('../images/jumback.jpg');
       background:no-repeat;
       background-size:100% auto;
 }
