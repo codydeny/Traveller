@@ -25,8 +25,9 @@
 	<link rel="stylesheet" href="css/aos.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/jquery.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"> 
+	
+  <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">  -->
 
 	
 
@@ -67,16 +68,31 @@
 </nav>
 
 
-<div class="mainhead jumbotron h-100 mt-5">
+<div class="jumbotron mainhead h-100 mt-5 text-light" style="background-image: url('images/jumback.JPG');">
 
   <h1 class="display-4" data-aos="fade-down" data-aos-duration="3000">Hello, world!</h1>
   <p class="lead" data-aos="fade-down" data-aos-duration="3000">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+
   <hr class="my-5" data-aos="zoom-in">
   <p data-aos="zoom-in">It uses utility classes for typography and spacing to space content out within the larger container.</p>
   <p class="lead" data-aos="fade-up" data-aos-duration="3000">
     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Fast Enquiry</button>
   </p>
+<br> <br> <br>
+
+  <center>
+ <a href='#Scrolled' class="scrollDown" style="margin-left: 200px;">
+<svg class="arrows">
+              <path class="a1" d="M0 0 L30 32 L60 0"></path>
+              <path class="a2" d="M0 20 L30 52 L60 20"></path>
+              <path class="a3" d="M0 40 L30 72 L60 40"></path>
+            </svg>
+</a>
+</center>
+  
 </div>
+
+
 
 
   
@@ -131,12 +147,11 @@
   
 </div>
 
-<br>
 
 <!--Bootstrap Courosel-->
 
 <div data-aos="fade-up"
-     data-aos-duration="3000">
+     data-aos-duration="3000" id="Scrolled">
 <div id="carouselExampleIndicators" class="carousel slide container BootSlider" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -359,6 +374,21 @@
 
   </script>
 
- 
+<script type="text/javascript">
+
+$(document).ready(function(){
+  $(".scrollDown").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1100, function(){
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+ </script>
 <!--End of Document-->
 </html>
