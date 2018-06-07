@@ -48,19 +48,19 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mt-lg-0">
       <li class="nav-item m-2">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item m-2">
-        <a class="nav-link" href="#">Explore</a>
+        <a class="nav-link" href="explore.html">Explore</a>
       </li>
       <li class="nav-item m-2">
-        <a class="nav-link" href="#">Gallery</a>
+        <a class="nav-link" href="gallery.html">Gallery</a>
       </li>
       <li class="nav-item m-2">
-        <a class="nav-link" href="#"></a>
+        <a class="nav-link" href="about.html">About</a>
       </li>
       <li class="nav-item m-2">
-        <a class="nav-link" href="#">Contact Us</a>
+        <a class="nav-link" href="contact.html">Contact Us</a>
       </li>
     </ul>
     
@@ -78,8 +78,8 @@
   <p class="lead" data-aos="fade-up" data-aos-duration="3000">
     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Fast Enquiry</button>
   </p>
-<br> <br> <br>
 
+<br> <br> <br>
   <center>
  <a href='#Scrolled' class="scrollDown" style="margin-left: 200px;">
 <svg class="arrows">
@@ -389,6 +389,16 @@ $(document).ready(function(){
     } 
   });
 });
+ </script>
+
+ <script type="text/javascript">
+  //prevent horizontal scrolling
+   var scrollEventHandler = function()
+{
+  window.scroll(0, window.pageYOffset)
+}
+
+window.addEventListener("scroll", scrollEventHandler, false);
  </script>
 <!--End of Document-->
 </html>
