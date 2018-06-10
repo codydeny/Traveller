@@ -323,8 +323,14 @@ table {
   background-attachment: fixed;
   margin-top: 73px;
 }
+
 .HeroSection h5 {
   color:white;
   text-shadow:2px 2px #333;
 }
 
+#success {
+
+       height: 100px;
+       width: 100px;
+}

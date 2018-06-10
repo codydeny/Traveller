@@ -3,7 +3,7 @@
         $apiKey = urlencode('VEhoDuOrivA-ybhtRElTTCoNlXIOkqLwUJIg3zhXBz');
         
         // Message details
-        $numbers = urlencode('919997066760');
+        $numbers = urlencode('919997037494');
         $sender = urlencode('TXTLCL');
         $Msgdata = "Name: ".$_POST['name']." \nMobile Number: ".$_POST['mob']."\nDate: ".$_POST['date']."\nNo. of Rooms: ".$_POST['nrooms']. "\nType of Room: ".$_POST['roomtype'];
         $message = rawurlencode($Msgdata);
@@ -18,5 +18,9 @@
         curl_close($ch);
         
         // Process your response here
-        echo $response;
+        $response = json_decode($response,true);
+        $data = $response['status'];
+
+        echo "<center> <h1>".$data."</h1> </center>";
+                     
     ?>

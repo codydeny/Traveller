@@ -112,8 +112,19 @@
         </div>
 
         <div class="modal-body">
+
+                               <center><div id="success">
+                              <img src="sign.png" style="width: 100px; height: 100px;">
+                            </div>
+
+                           <div id="loading-image">
+                              <img src="loader.gif" style="height: 100px; width: 100px;">
+                            </div>
+                            
+                               </center>
+                            <div id="form-content">
         
-                            <form action="send.php" method="post" id="contactFrm" name="contactFrm">
+                            <form method="POST" id="contactFrm" name="contactFrm" class="form-control">
                                 <input type="text" required="" placeholder="Your Name" value="" name="name" class="form-control"><br>
                                 <input type="tel" required="" placeholder="Mobile Number" value="" name="mob" class="form-control"><br>
                                 <input type="text" required="" id="datepicker" placeholder="Date" name="date" class="form-control"><br><br>
@@ -131,10 +142,14 @@
   												<option value="Ten Bed">10 Bed</option>
 											   </select> 
                               <br>
-                               <input type="submit" value="Check" name="submit" class="btn btntxt">
+                              
+                               <input type="submit" value="Check" name="submit" class="btn btntxt" id="BtnSend">
+
+                               
                             </form>
-                            
-                       
+                           
+
+                     
 
         </div>
         <div class="modal-footer">
@@ -391,14 +406,67 @@ $(document).ready(function(){
 });
  </script>
 
- <script type="text/javascript">
-  //prevent horizontal scrolling
-   var scrollEventHandler = function()
-{
-  window.scroll(0, window.pageYOffset)
-}
 
-window.addEventListener("scroll", scrollEventHandler, false);
- </script>
+<script type="text/javascript">
+   
+$(document).ready(function() {  
+
+
+      $('#loading-image').hide();
+      $('#success').hide();
+  
+  // submit form using $.ajax() method
+  
+  $('#contactFrm').submit(function(e){
+    
+    e.preventDefault(); // Prevent Default Submission
+    $('#loading-image').show();
+    $('#form-content').hide();
+    $.ajax({
+      url: 'send.php',
+      type: 'POST',
+      data: $(this).serialize() // it will serialize the form data
+    })
+
+    .done(function(data){
+                 
+
+                 $('#loading-image').hide();
+                 
+                
+            $('#form-content').fadeOut('slow', function(){
+        $('#form-content').fadeIn('slow').html(data);
+        $('#success').show();
+      });
+    })
+    .fail(function(){
+      alert('Ajax Submit Failed ...');  
+    });
+  });
+  
+  
+  /*
+  // submit form using ajax short hand $.post() method
+  
+  $('#reg-form').submit(function(e){
+    
+    e.preventDefault(); // Prevent Default Submission
+    
+    $.post('submit.php', $(this).serialize() )
+    .done(function(data){
+      $('#form-content').fadeOut('slow', function(){
+        $('#form-content').fadeIn('slow').html(data);
+      });
+    })
+    .fail(function(){
+      alert('Ajax Submit Failed ...');
+    });
+    
+  });
+  */
+  
+});
+</script>
+
 <!--End of Document-->
 </html>
