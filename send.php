@@ -19,8 +19,8 @@
         
         // Process your response here
         $response = json_decode($response,true);
-        $data = $response['status'];
+       
+       	echo "<center> <h2>".$response['status']."</h2> <br> * To fill another Please Refresh the page </center>";
 
-        echo "<center> <h1>".$data."</h1> </center>";
-                     
-    ?>
+      
+
