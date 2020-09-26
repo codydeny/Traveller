@@ -10,3 +10,6 @@
  * PHP (for Inquiry Part)
  
 ### Working demo can be found [here](https://codydeny.github.io/Traveller)
+### Contributors
+* [Puneet Bhatt](https://github.com/codydeny)
+* [Prabal Dhasmana](https://github.com/Prabald)
